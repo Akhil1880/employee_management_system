@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="A clear, thoughtful workspace for managing your people.">
+  <title>People — PeopleDesk India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="PeopleDesk India home">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5 19.2 13l9.3 3-9.3 3.1L16 28.5l-3.2-9.4L3.5 16l9.3-3 3.2-9.5Z"/><circle cx="16" cy="16" r="2.1"/></svg></span>
+        <span class="brand-name">peopledesk<span>.</span></span>
+      </a>
+
+      <div class="workspace-label">WORKSPACE</div>
+      <button class="workspace-switcher" type="button">
+        <span class="workspace-avatar">S</span>
+        <span class="workspace-copy"><strong>India Integrated</strong><small>Free workspace</small></span>
+        <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg>
+      </button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="#overview" data-view="overview"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/></svg>Overview</a>
+        <a class="nav-link active" href="#people" data-view="people"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.3"/><path d="M3.5 19.5v-1.3a5.5 5.5 0 0 1 11 0v1.3M16 5.2a3.3 3.3 0 0 1 0 6.4m1.2 2.8a5.3 5.3 0 0 1 3.3 4.9v.2"/></svg>People<span class="nav-count" id="nav-count">0</span></a>
+        <a class="nav-link" href="#departments" data-view="departments"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>Departments</a>
+        <a class="nav-link" href="#reports" data-view="reports"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V12m5 7.5V5m5 14.5v-9m5 9V8"/></svg>Reports</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <div class="help-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.7 9a2.4 2.4 0 1 1 4.1 1.7c-1 .9-1.8 1.2-1.8 2.8m0 3h.1"/></svg></div>
+          <strong>Need a hand?</strong>
+          <p>Visit our help center for quick answers.</p>
+          <a href="mailto:support@peopledesk.example">Get support <span aria-hidden="true">↗</span></a>
+        </div>
+        <a class="nav-link settings-link" href="#settings"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1a1.8 1.8 0 1 1-2.5 2.5l-.1-.1a1.8 1.8 0 0 0-3 .9v.2a1.8 1.8 0 1 1-3.6 0v-.2a1.8 1.8 0 0 0-3-.9l-.1.1a1.8 1.8 0 1 1-2.5-2.5l.1-.1a1.8 1.8 0 0 0-.9-3H3.7a1.8 1.8 0 1 1 0-3.6h.2a1.8 1.8 0 0 0 .9-3l-.1-.1a1.8 1.8 0 1 1 2.5-2.5l.1.1a1.8 1.8 0 0 0 3-.9v-.2a1.8 1.8 0 1 1 3.6 0v.2a1.8 1.8 0 0 0 3 .9l.1-.1a1.8 1.8 0 1 1 2.5 2.5l-.1.1a1.8 1.8 0 0 0 .9 3h.2a1.8 1.8 0 1 1 0 3.6h-.2a1.8 1.8 0 0 0-.9 3Z"/></svg>Settings</a>
+        <button class="profile-card" type="button">
+          <span class="profile-avatar">AR</span>
+          <span class="profile-copy"><strong>Ananya Rao</strong><small>Workspace admin</small></span>
+          <svg class="more-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="4" cy="10" r="1"/><circle cx="10" cy="10" r="1"/><circle cx="16" cy="10" r="1"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" type="button" aria-label="Open navigation"><span></span><span></span></button>
+        <div class="breadcrumbs"><span>Workspace</span><span class="crumb-divider">/</span><strong id="breadcrumb-current">People</strong></div>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"/><path d="m16 16 4.5 4.5"/></svg></button>
+          <button class="icon-button notification-button" type="button" aria-label="Notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4"/></svg><i></i></button>
+          <span class="topbar-divider"></span>
+          <button class="topbar-profile" type="button" aria-label="Ananya Rao profile"><span class="profile-avatar small">AR</span><svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg></button>
+        </div>
+      </header>
+
+      <div class="page-wrap">
+        <section class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> <span id="today-date"></span></div>
+            <h1 id="page-title">People</h1>
+            <p class="page-subtitle" id="page-subtitle">A little overview of the people who make your team great.</p>
+          </div>
+          <div class="welcome-actions">
+            <button class="button button-secondary" id="export-button" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v9m0 0 3.5-3.5M10 12 6.5 8.5M4 13v3h12v-3"/></svg>Export</button>
+            <button class="button button-primary" id="add-employee-button" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>Add person</button>
+          </div>
+        </section>
+
+        <section class="stat-grid" aria-label="Team summary">
+          <article class="stat-card">
+            <div class="stat-top"><span class="stat-label">Total people</span><span class="stat-icon purple"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19v-1.2a5.5 5.5 0 0 1 11 0V19M16 5.5a3 3 0 0 1 0 5.9m1 2.6a5.3 5.3 0 0 1 3.5 5"/></svg></span></div>
+            <div class="stat-value" id="total-count">—</div>
+            <div class="stat-foot"><span class="trend-up"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 10 4-4 3 3 4-5"/></svg> 8.2%</span><span>vs. last month</span></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span class="stat-label">Active members</span><span class="stat-icon green"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.3 4L19 7"/></svg></span></div>
+            <div class="stat-value" id="active-count">—</div>
+            <div class="stat-foot"><span class="status-dot"></span><span>On your team right now</span></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span class="stat-label">On leave</span><span class="stat-icon amber"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg></span></div>
+            <div class="stat-value" id="leave-count">—</div>
+            <div class="stat-foot"><span>Back soon</span><span class="stat-soft-icon">☀</span></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span class="stat-label">Departments</span><span class="stat-icon blue"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></span></div>
+            <div class="stat-value" id="department-count">—</div>
+            <div class="stat-foot"><span>Across your organization</span></div>
+          </article>
+        </section>
+
+        <section class="team-panel" id="employee-panel">
+          <div class="panel-heading">
+            <div><div class="panel-title-line"><h2>All people</h2><span class="count-pill" id="table-count">0</span></div><p>Manage your team members and their account permissions.</p></div>
+            <button class="button button-secondary filter-button" id="clear-filters" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 5h13M6 10h8m-5 5h2"/></svg>Filters <span class="filter-count" id="filter-count">0</span></button>
+          </div>
+          <div class="table-toolbar">
+            <div class="tabs" role="tablist" aria-label="Employee status">
+              <button class="tab active" type="button" data-status="All">All people <span id="all-tab-count">0</span></button>
+              <button class="tab" type="button" data-status="Active">Active <span id="active-tab-count">0</span></button>
+              <button class="tab" type="button" data-status="On Leave">On leave</button>
+              <button class="tab" type="button" data-status="Inactive">Inactive</button>
+            </div>
+            <div class="toolbar-tools">
+              <label class="search-box"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.8" cy="8.8" r="5.5"/><path d="m13 13 4 4"/></svg><input id="search-input" type="search" placeholder="Search" autocomplete="off" aria-label="Search people"></label>
+              <button class="view-button" id="view-button" type="button" aria-label="Toggle compact view"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 4.5h13m-13 5h13m-13 5h13"/></svg></button>
+            </div>
+          </div>
+          <div class="department-filter-row">
+            <label for="department-filter">Department</label>
+            <select id="department-filter"><option value="All">All departments</option></select>
+            <span class="table-hint" id="table-hint">Showing everyone in your workspace</span>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Name <span class="sort-icon">↕</span></th><th>Status</th><th>Role</th><th>Department</th><th>Salary (INR) <span class="sort-icon">↕</span></th><th>Date joined <span class="sort-icon">↕</span></th><th><span class="sr-only">Actions</span></th></tr></thead>
+              <tbody id="employee-rows"><tr><td colspan="8" class="loading-cell"><span class="spinner"></span> Loading your team…</td></tr></tbody>
+            </table>
+          </div>
+          <footer class="table-footer"><span id="result-summary">Loading people…</span><div class="pagination"><button type="button" disabled aria-label="Previous page">←</button><button class="page-number active" type="button">1</button><button type="button" disabled aria-label="Next page">→</button></div></footer>
+        </section>
+
+        <footer class="page-footer"><span>© <span id="current-year"></span> PeopleDesk India</span><span>Made for teams that care about people <span class="footer-heart">♥</span></span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="employee-modal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header"><div><span class="modal-kicker">TEAM DIRECTORY</span><h2 id="modal-title">Add a person</h2><p>Add someone new to your workspace.</p></div><button class="icon-button modal-close" type="button" data-close-modal aria-label="Close dialog">×</button></div>
+      <form id="employee-form">
+        <input id="employee-id" type="hidden">
+        <div class="form-grid">
+          <label class="form-field full-width"><span>Full name <b>*</b></span><input name="name" required maxlength="100" placeholder="e.g. Jamie Lee"></label>
+          <label class="form-field full-width"><span>Work email <b>*</b></span><input name="email" type="email" required maxlength="160" placeholder="jamie@company.com"></label>
+          <label class="form-field"><span>Role <b>*</b></span><input name="role" required maxlength="100" placeholder="e.g. Product Designer"></label>
+          <label class="form-field"><span>Department <b>*</b></span><select name="department" required><option value="" disabled selected>Select department</option><option>Design</option><option>Engineering</option><option>Marketing</option><option>Human Resources</option><option>Finance</option><option>Operations</option><option>Sales</option></select></label>
+          <label class="form-field"><span>Status</span><select name="status"><option>Active</option><option>On Leave</option><option>Inactive</option></select></label>
+          <label class="form-field"><span>Annual salary (INR)</span><div class="input-prefix"><span>₹</span><input name="salary" type="number" min="0" step="10000" value="800000" required></div></label>
+          <label class="form-field full-width"><span>Date joined <b>*</b></span><input name="joinDate" type="date" required></label>
+        </div>
+        <div class="modal-error" id="form-error" role="alert" hidden></div>
+        <div class="modal-actions"><button class="button button-secondary" type="button" data-close-modal>Cancel</button><button class="button button-primary" id="save-button" type="submit">Add person</button></div>
+      </form>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
